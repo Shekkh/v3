@@ -139,8 +139,6 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-        else:
-            pass
     if choice == "8":
         c = d = random.choices(a)
         d = random.choices(b)
