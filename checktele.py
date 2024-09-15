@@ -16,7 +16,6 @@ from threading import Thread
 a = 'qwertyuiopasdfghjklzxcvbnm'
 b = '1234567890'
 e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
-x = 'x'
 
 banned = []
 isclaim = ["off"]
@@ -100,12 +99,12 @@ def gen_user(choice):
         else:
             pass
     if choice == "5":
-        c = d = random.choices(x)
+        c = d = random.choices('x')
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], d[0], d[0], c[0]]
         username = ''.join(f)
         if username in banned[0]:
-            c = d = random.choices(x)
+            c = d = random.choices('x')
             d = random.choices(e)
             f = [c[0], c[0], c[0], c[0], d[0], d[0], c[0]]
             username = ''.join(f)
@@ -169,13 +168,13 @@ def gen_user(choice):
             pass
     if choice == "10":
         c = d = random.choices(e)
-        d = random.choices(x)
+        d = random.choices('x')
         f = [d[0], c[0], d[0], d[0], d[0], d[0], d[0], d[0]]
         random.shuffle(f)
         username = ''.join(f)
         if username in banned[0]:
             c = d = random.choices(e)
-            d = random.choices(x)
+            d = random.choices("x")
             f = [c[0], d[0], d[0], d[0], d[0], d[0], d[0], d[0]]
             random.shuffle(f)
             username = ''.join(f)
@@ -259,14 +258,12 @@ async def _(event):
 ⌯ Source Max ! 🐊
 ⤷ User : @{username} 
 ⤷ Clicks : {trys} 
-⤷ Type : #سداسي
+⤷ Type : #No.1
 ⤷ Quran : ( @x_o_x )
-⤷ Developer : ( @aaraar )
 ⤷ Max : ( @B_BzB )
- ( دري يوزرات زربه بس الاحتياط بل مستقبل جاري تخزين )
-( الينصاد ما يرجع حته لو يوزر خايس )
+( اليوزرات تخزين فقط )
     ''')
-                    await event.client.send_message("@P8_PPBOT", f''' 
+                    await event.client.send_message("https://t.me/+i9nyCPGLSs9mZThi", f''' 
 ⌯ Source Max  ! 🐊
 ⤷ User : @{username} 
 ⤷ Clicks : {trys} 
@@ -291,7 +288,7 @@ async def _(event):
         isclaim.clear()
         isclaim.append("off")
         trys = ""
-        await event.client.send_message("@P8_PPBOT", "انتهاء الفحص تم صيد 🔔")
+        await event.client.send_message(event.chat_id, "انتهاء الفحص تم صيد 🔔")
         
 @sython.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت (.*)"))
 async def _(event):
